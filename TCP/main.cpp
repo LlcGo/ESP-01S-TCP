@@ -51,7 +51,8 @@ int main()
         while (1)
         {
             Sleep(5000);
-            send(connfd, (char*)"111", 3, 0);
+            send(connfd, (char*)"111\r\n", 5, 0);
+            std::cout << "send message" << std::endl;
         }
 
     }
